@@ -3,7 +3,7 @@
 <html lang="en-US" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>TITLE GOES HERE</title>
+  <title>ya YEET mofos</title>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
@@ -15,11 +15,12 @@
 <main>
   <h2>Click the buttons to make (or stop) some sound:</h2>
   <button id="playButton" class="btn-transport" type="button">play</button>
-  <button id="stopButton" class="btn-transport" type="button">stop</button>
+  <button id="stopButton" class="btn-transport1" type="button">stop</button>
+  <button id="doNotPress" class="btn-transport2" type="button">NOPRESS</button>
   <fieldset>
-    <legend>Use slider to control pitch shift</legend>
+    <legend>use slider for some dank memes</legend>
     <label id="pitchShiftLabel" for="pitchShiftSlider">0</label>
-    <input type="range" id="pitchShiftSlider" name="pitchShiftSlider" min="-12" max="12" step="0.5" />
+    <input type="range" id="pitchShiftSlider" name="pitchShiftSlider" min="-14" max="14" step="0.5" />
   </fieldset>
 </main>
 
@@ -46,6 +47,8 @@ var synth = new Tone.Synth({
 // Sample code to load a sound file
 // NOTE: This sound file is not played in this script
 var clave = new Tone.Player('audio/clave.mp3').toMaster();
+var kazoo_kid = new Tone.Player("audio/kazoo_kid.mp3").connect(pitchShift);
+var air_horn = new Tone.Player("audio/air_horn.mp3").toMaster();
 
 // Bind slider value to pitch shift amount
 // Every change in slider value triggers change in pitch shift
@@ -64,16 +67,27 @@ pitchShiftSlider.addEventListener('input', function() {
 document.querySelector('#playButton').onclick = function() {
   console.log('The play button has been clicked.');
 
+  kazoo_kid.start()
+
   // Play a middle C, which will sound until the stop button is clicked
-  synth.triggerAttack('C4');
+  //synth.triggerAttack('C4');
 };
 
 // The following block of code will run when the stop button is clicked
 document.querySelector('#stopButton').onclick = function() {
   console.log('The stop button has been clicked.');
 
+  kazoo_kid.stop()
+
   // Stop the note from sounding
-  synth.triggerRelease();
+  //synth.triggerRelease();
+};
+
+document.querySelector('#doNotPress').onclick = function() {
+  console.log('The world is ending');
+
+  air_horn.start()
+
 };
 
 </script>
