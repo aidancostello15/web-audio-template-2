@@ -17,6 +17,7 @@
   <button id="playButton" class="btn-transport" type="button">play</button>
   <button id="stopButton" class="btn-transport1" type="button">stop</button>
   <button id="doNotPress" class="btn-transport2" type="button">NOPRESS</button>
+  <button id="OOF" class="btn-transport2" type="button">OOF</button>
   <fieldset>
     <legend>use slider for some dank memes</legend>
     <label id="pitchShiftLabel" for="pitchShiftSlider">0</label>
@@ -49,6 +50,7 @@ var synth = new Tone.Synth({
 var clave = new Tone.Player('audio/clave.mp3').toMaster();
 var kazoo_kid = new Tone.Player("audio/kazoo_kid.mp3").connect(pitchShift);
 var air_horn = new Tone.Player("audio/air_horn.mp3").toMaster();
+var oof = new Tone.Player("audio/oof.mp3").toMaster();
 
 // Bind slider value to pitch shift amount
 // Every change in slider value triggers change in pitch shift
@@ -87,6 +89,13 @@ document.querySelector('#doNotPress').onclick = function() {
   console.log('The world is ending');
 
   air_horn.start()
+
+};
+
+document.querySelector('#OOF').onclick = function() {
+  console.log('rip roblox');
+
+  oof.start()
 
 };
 
