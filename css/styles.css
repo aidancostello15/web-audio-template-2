@@ -1,17 +1,19 @@
 body {
   text-align: center;
   font-family: "Comic Sans MS", cursive, sans-serif;
+  color: midnightblue;
   margin-top: 7em;
-  background-color: deeppink;
+  background-color: paleturquoise;
 }
 
 .btn-transport {
   font-size: 1.5em;
   font-weight: 750;
   font-family: "Comic Sans MS", cursive, sans-serif;
+  color: midnightblue;
   padding: 1em 2em;
   margin: .1em .2em;
-  border: 3px solid black;
+  border: 3px solid dimgrey;
   border-radius: 3px;
   background: none;
   transition: color .2s,
@@ -26,9 +28,10 @@ body {
   font-size: 1.5em;
   font-weight: 750;
   font-family: "Comic Sans MS", cursive, sans-serif;
+  color: midnightblue;
   padding: 1em 2em;
   margin: .1em .2em;
-  border: 3px solid black;
+  border: 3px solid dimgrey;
   border-radius: 3px;
   background: none;
   transition: color .2s,
@@ -43,9 +46,28 @@ body {
   font-size: 1.5em;
   font-weight: 750;
   font-family: "Comic Sans MS", cursive, sans-serif;
+  color: midnightblue;
   padding: 1em 2em;
   margin: .1em .2em;
-  border: 3px solid black;
+  border: 3px solid dimgrey;
+  border-radius: 3px;
+  background: none;
+  transition: color .2s,
+  border .2s,
+  border-color .2s,
+  border-radius .2s,
+  padding .2s,
+  margin .2s;
+}
+
+.btn-transport3 {
+  font-size: 1.5em;
+  font-weight: 750;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: midnightblue;
+  padding: 1em 2em;
+  margin: .1em .2em;
+  border: 3px solid dimgrey;
   border-radius: 3px;
   background: none;
   transition: color .2s,
@@ -61,8 +83,8 @@ body {
   padding: 1.1em 2.2em;
   border-radius: 8px;
   cursor: pointer;
-  color: green;
-  border-color: green;
+  color: limegreen;
+  border-color: limegreen;
 }
 
 .btn-transport1:hover {
@@ -79,8 +101,17 @@ body {
   padding: 1.1em 2.2em;
   border-radius: 8px;
   cursor: pointer;
-  color: pink;
-  border-color: purple;
+  color: fuchsia;
+  border-color: darkviolet;
+}
+
+.btn-transport3:hover {
+  margin: 0;
+  padding: 1.1em 2.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  color: coral;
+  border-color: coral;
 }
 
 label {

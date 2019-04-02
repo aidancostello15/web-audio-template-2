@@ -16,8 +16,9 @@
   <h2>Click the buttons to make (or stop) some sound:</h2>
   <button id="playButton" class="btn-transport" type="button">play</button>
   <button id="stopButton" class="btn-transport1" type="button">stop</button>
-  <button id="doNotPress" class="btn-transport2" type="button">NOPRESS</button>
+  <button id="doNotPress" class="btn-transport2" type="button">pls no press</button>
   <button id="OOF" class="btn-transport2" type="button">OOF</button>
+  <button id="transportButton" class="btn-transport3" type="button">start or stop transport</button>
   <fieldset>
     <legend>use slider for some dank memes</legend>
     <label id="pitchShiftLabel" for="pitchShiftSlider">0</label>
@@ -66,37 +67,53 @@ pitchShiftSlider.addEventListener('input', function() {
 });
 
 // The following block of code will run when the play button is clicked
+// document.querySelector('#playButton').onclick = function() {
+  // console.log('The play button has been clicked.');
+
+  // synth.triggerAttack("C4");
+
+  // Play a middle C, which will sound until the stop button is clicked
+  // synth.triggerAttack('C4');
+// };
+
+// The following block of code will run when the play button is clicked
+
 document.querySelector('#playButton').onclick = function() {
   console.log('The play button has been clicked.');
 
   kazoo_kid.start()
-
-  // Play a middle C, which will sound until the stop button is clicked
-  //synth.triggerAttack('C4');
+  // Start Kazoo Kid
 };
 
-// The following block of code will run when the stop button is clicked
 document.querySelector('#stopButton').onclick = function() {
   console.log('The stop button has been clicked.');
 
   kazoo_kid.stop()
-
-  // Stop the note from sounding
-  //synth.triggerRelease();
+  // Stop Kazoo Kid
 };
 
 document.querySelector('#doNotPress').onclick = function() {
   console.log('The world is ending');
 
   air_horn.start()
-
+  // Start air horn
 };
 
 document.querySelector('#OOF').onclick = function() {
   console.log('rip roblox');
 
   oof.start()
+  // Start OOF
+};
 
+document.querySelector('#transportButton').onclick = function() {
+  console.log('transport dat ish');
+
+  Tone.context.resume();
+  // Start the audio context
+
+  Tone.Transport.toggle();
+  // Start or stop transport
 };
 
 </script>
