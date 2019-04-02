@@ -9,16 +9,18 @@
 <body>
 
 <header>
-  <h1>Welcome to Web Audio!</h1>
+  <h1>u lost boi???</h1>
 </header>
 
 <main>
-  <h2>Click the buttons to make (or stop) some sound:</h2>
-  <button id="playButton" class="btn-transport" type="button">play</button>
-  <button id="stopButton" class="btn-transport1" type="button">stop</button>
+  <h2>Welcome to My Club Penguin Fan Page!</h2>
+  <button id="playButton" class="btn-transport" type="button">kazoo</button>
+  <button id="stopButton" class="btn-transport1" type="button">no kazoo</button>
   <button id="doNotPress" class="btn-transport2" type="button">pls no press</button>
   <button id="OOF" class="btn-transport2" type="button">OOF</button>
-  <button id="transportButton" class="btn-transport3" type="button">start or stop transport</button>
+  <button id="transportButton" class="btn-transport3" type="button">transport</button>
+  <button id="playButton1" class="btn-transport" type="button">loop</button>
+  <button id="stopButton1" class="btn-transport1" type="button">no loop</button>
   <fieldset>
     <legend>use slider for some dank memes</legend>
     <label id="pitchShiftLabel" for="pitchShiftSlider">0</label>
@@ -67,53 +69,73 @@ pitchShiftSlider.addEventListener('input', function() {
 });
 
 // The following block of code will run when the play button is clicked
-// document.querySelector('#playButton').onclick = function() {
+// document.querySelector('#playButton1').onclick = function() {
   // console.log('The play button has been clicked.');
 
   // synth.triggerAttack("C4");
 
   // Play a middle C, which will sound until the stop button is clicked
-  // synth.triggerAttack('C4');
 // };
 
 // The following block of code will run when the play button is clicked
 
-document.querySelector('#playButton').onclick = function() {
-  console.log('The play button has been clicked.');
+// create a loop
+var loop = new Tone.Loop(function(time) {
+	synth.triggerAttackRelease("Db1", "8n", time);
+}, "4n");
 
-  kazoo_kid.start()
+document.querySelector('#playButton1').onclick = function() {
+  console.log('The loop has started');
+
+  // Start synth loop
+  loop.start()
+};
+
+document.querySelector('#stopButton1').onclick = function() {
+  console.log('The loop has stopped');
+
+  // Stop synth loop
+  loop.stop();
+};
+
+
+// All the button functions
+document.querySelector('#playButton').onclick = function() {
+  console.log('Initiating start protocol');
+
   // Start Kazoo Kid
+  kazoo_kid.start()
 };
 
 document.querySelector('#stopButton').onclick = function() {
-  console.log('The stop button has been clicked.');
+  console.log('Initiating stop protocol');
 
-  kazoo_kid.stop()
   // Stop Kazoo Kid
+  kazoo_kid.stop()
 };
 
 document.querySelector('#doNotPress').onclick = function() {
   console.log('The world is ending');
 
-  air_horn.start()
   // Start air horn
+  air_horn.start()
 };
 
 document.querySelector('#OOF').onclick = function() {
   console.log('rip roblox');
 
-  oof.start()
   // Start OOF
+  oof.start()
 };
 
 document.querySelector('#transportButton').onclick = function() {
   console.log('transport dat ish');
 
-  Tone.context.resume();
   // Start the audio context
+  Tone.context.resume();
 
-  Tone.Transport.toggle();
   // Start or stop transport
+  Tone.Transport.toggle();
 };
 
 </script>
