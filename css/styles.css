@@ -1,9 +1,9 @@
 body {
   text-align: center;
   font-family: "Comic Sans MS", cursive, sans-serif;
-  color: midnightblue;
+  color: pink;
   margin-top: 7em;
-  background-color: paleturquoise;
+  background-color: lime;
 }
 
 .btn-transport {
@@ -13,7 +13,7 @@ body {
   color: midnightblue;
   padding: 1em 2em;
   margin: .1em .2em;
-  border: 3px solid dimgrey;
+  border: 3px solid orange;
   border-radius: 3px;
   background: none;
   transition: color .2s,
@@ -31,7 +31,7 @@ body {
   color: midnightblue;
   padding: 1em 2em;
   margin: .1em .2em;
-  border: 3px solid dimgrey;
+  border: 3px solid yellow;
   border-radius: 3px;
   background: none;
   transition: color .2s,
@@ -49,7 +49,7 @@ body {
   color: midnightblue;
   padding: 1em 2em;
   margin: .1em .2em;
-  border: 3px solid dimgrey;
+  border: 3px solid red;
   border-radius: 3px;
   background: none;
   transition: color .2s,
@@ -67,7 +67,7 @@ body {
   color: midnightblue;
   padding: 1em 2em;
   margin: .1em .2em;
-  border: 3px solid dimgrey;
+  border: 3px solid blue;
   border-radius: 3px;
   background: none;
   transition: color .2s,
